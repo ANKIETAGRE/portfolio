@@ -76,7 +76,7 @@ export default function LoadingScreen() {
               <motion.div
                 initial={{ width: '0%' }}
                 animate={{ width: `${Math.min(progress, 100)}%` }}
-                className="h-full bg-accent rounded-full"
+                className="h-full bg-primary rounded-full"
               />
             </div>
 
