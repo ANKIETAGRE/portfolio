@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bgDark: #f3f4fc;
+  --color-bg-dark: #f3f4fc;
+  --color-cardBg: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-primary: #4422EF;
+  --color-secondary: #AEF31F;
+  --color-accent: #AEF31F;
+  
+  --font-poppins: 'Noto Sans', sans-serif;
+  --font-inter: 'Noto Sans', sans-serif;
+  --font-syne: 'Noto Sans', sans-serif;
+  --font-noto: 'Noto Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    cursor: default;
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: var(--color-bgDark);
+    color: #1e293b; /* dark slate text */
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  /* Global typography overrides for the light theme */
+  h1:not(.text-transparent), 
+  h2:not(.text-transparent), 
+  h3:not(.text-transparent), 
+  h4:not(.text-transparent), 
+  h5:not(.text-transparent), 
+  h6:not(.text-transparent),
+  span:not(.text-transparent):not(.text-primary) {
+    color: #0f172a !important; /* Force slate-900 */
+  }
+  
+  p:not(.text-transparent) {
+    color: #334155 !important; /* Force slate-700 */
+  }
+  
+  /* Gray text helpers override */
+  .text-gray-300 {
+    color: #475569 !important;
+  }
+  .text-gray-400 {
+    color: #64748b !important;
+  }
+  .text-gray-500 {
+    color: #94a3b8 !important;
+  }
+  
+  /* Custom scrollbar in light mode */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bgDark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* light scrollbar */
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Card and Panel light mode styling */
+  .bg-cardBg\/40, .bg-cardBg, .bg-\[\#111827\] {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04) !important;
+  }
+  
+  /* Form Inputs global overrides */
+  input, textarea, select {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #0f172a !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #94a3b8 !important;
+  }
+  
+  /* Fix Back to Top button icon color */
+  .bg-primary.text-bgDark {
+    color: #ffffff !important;
+  }
+  
+  /* White border lines override */
+  .border-white\/5, .border-white\/10 {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  /* Timeline track line override */
+  .bg-white\/10 {
+    background-color: #cbd5e1 !important;
+  }
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+}
