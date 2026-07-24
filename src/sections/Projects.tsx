@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PROJECTS_LIST } from '../constants';
+import { PROJECTS_LIST, PERSONAL_INFO } from '../constants';
 import { FiGithub, FiExternalLink, FiStar } from 'react-icons/fi';
 
 const FILTERS = ['All', 'AI/ML', 'React/FastAPI'];
@@ -125,6 +125,19 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* More Projects Button */}
+        <div className="mt-16 flex justify-center">
+          <a
+            href={PERSONAL_INFO.socials.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-white/10 rounded-xl bg-cardBg/30 text-gray-300 font-mono text-xs md:text-sm hover:text-primary hover:border-primary/30 transition-all duration-300 shadow-md group active:scale-95 select-none cursor-pointer"
+          >
+            <FiGithub className="text-lg group-hover:scale-110 transition-transform" />
+            <span>view_all_repositories_on_github()</span>
+          </a>
+        </div>
       </div>
     </section>
   );
