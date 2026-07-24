@@ -72,11 +72,11 @@ export default function LoadingScreen() {
           {/* Progress Section */}
           <div className="w-80 md:w-96 space-y-4">
             {/* Progress Bar container */}
-            <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden border border-white/10 shadow-inner">
+            <div className="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden border border-slate-700 shadow-inner">
               <motion.div
                 initial={{ width: '0%' }}
                 animate={{ width: `${Math.min(progress, 100)}%` }}
-                className="h-full bg-primary rounded-full"
+                className="h-full bg-accent rounded-full"
               />
             </div>
 
